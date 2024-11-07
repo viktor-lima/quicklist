@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicklist - Lista de Compras</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">&#9776</span> 
+                <span class="logo-text">quicklist</span>
+            </div>
+            <nav>
+                <a href="#" class="back-button">← Voltar</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Compras da semana</h1>
+
+            <div class="add-item-form">
+                <input type="text" placeholder="Adicione um novo item" class="new-item-input">
+                <button class="add-button">Adicionar item</button>
+            </div>
+
+            <div class="shopping-list">
+                <div class="list-item">
+                    <input type="checkbox" id="item1">
+                    <label for="item1">Pão de forma</label>
+                    <button class="delete-button">&#128465</button>
+                </div>
+                <div class="list-item">
+                    <input type="checkbox" id="item2">
+                    <label for="item2">Café preto</label>
+                    <button class="delete-button">&#128465</button>
+                </div>
+                <div class="list-item">
+                    <input type="checkbox" id="item3">
+                    <label for="item3">Suco de laranja</label>
+                    <button class="delete-button">&#128465</button>
+                </div>
+                <div class="list-item">
+                    <input type="checkbox" id="item4">
+                    <label for="item4">Bolacha</label>
+                    <button class="delete-button">&#128465</button>
+                </div>
+            </div>
+
+            <div class="notification">
+                <span>O item foi removido da lista</span>
+                <button class="close-button">×</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
