@@ -2,137 +2,133 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-.container {
+  background-color: #f8f9fa;
+  padding: 20px;
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #d6246e;
-  font-weight: bold;
-}
-
-.logo-icon {
+  color: #333;
   font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .back-button {
-  color: #d6246e;
+  color: #d6336c;
   text-decoration: none;
-  font-size: 14px;
-}
-
-h1 {
-  color: #000;
-  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.add-item-form {
+.back-button::before {
+  content: "←";
+  margin-right: 5px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-item-container {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
 }
 
-.new-item-input {
+.add-item-input {
   flex: 1;
-  padding: 12px;
+  padding: 12px 16px;
   border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-.add-button {
-  background-color: #d6246e;
+.add-item-button {
+  background-color: #d6336c;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 12px 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .shopping-list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .list-item {
   display: flex;
   align-items: center;
-  background-color: white;
   padding: 16px;
-  border-radius: 6px;
-  gap: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eee;
 }
 
+/* Custom Checkbox Styles */
 .list-item input[type="checkbox"] {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #e0e0e0;
-  border-radius: 4px;
-  outline: none;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  margin-right: 12px;
   cursor: pointer;
   position: relative;
+  background: white;
 }
 
 .list-item input[type="checkbox"]:hover {
-  border-color: #d6246e;
+  border-color: #d6336c;
 }
 
 .list-item input[type="checkbox"]:checked {
-  background-color: #d6246e;
-  border-color: #d6246e;
+  background: white;
+  border-color: #d6336c;
 }
 
 .list-item input[type="checkbox"]:checked::after {
   content: "✓";
   position: absolute;
-  color: white;
-  font-size: 14px;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  color: #d6336c;
+  font-size: 14px;
+}
+
+.list-item input[type="checkbox"]:focus {
+  outline: 2px solid #d6336c;
+  outline-offset: 2px;
 }
 
 .list-item label {
   flex: 1;
-  font-size: 14px;
+  font-size: 16px;
+  color: #333;
 }
 
 .delete-button {
   background: none;
   border: none;
+  color: #aaa;
   cursor: pointer;
-  opacity: 0.5;
-  font-size: 16px;
-}
-
-.delete-button:hover {
-  opacity: 1;
+  font-size: 18px;
 }
 
 .notification {
@@ -140,40 +136,19 @@ h1 {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #dc3545;
+  background-color: #e03131;
   color: white;
-  padding: 16px 24px;
-  border-radius: 6px;
+  padding: 16px 20px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
+  gap: 10px;
 }
 
 .close-button {
   background: none;
   border: none;
   color: white;
-  font-size: 20px;
   cursor: pointer;
-  padding: 0 4px;
+  font-size: 20px;
 }
-
-.add-button:hover {
-  background-color: #b41e5c;
-}
-
-.new-item-input:focus {
-  outline: none;
-  border-color: #d6246e;
-}
-
-@media (max-width: 480px) {
-  .add-item-form {
-      flex-direction: column;
-  }
-  
-  .add-button {
-      width: 100%;
-  }
-} 
